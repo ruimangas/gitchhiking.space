@@ -1,0 +1,13 @@
+star:
+  build: .
+  ports:
+    - "3000:3000"
+  links:
+    - "db"
+  volumes:
+    - .:/app
+
+db:
+  image: "postgres:9.4.2"
+  ports:
+    - "5432:5432"
