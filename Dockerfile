@@ -1,6 +1,6 @@
 FROM ruby:2.2.2
 
-RUN apt-get update && apt-get install -y net-tools && apt-get install -y nodejs
+RUN apt-get update && apt-get install -y net-tools && apt-get install -y nodejs && apt-get install -y cron
 
 ENV APP_HOME /app
 ENV HOME /root
