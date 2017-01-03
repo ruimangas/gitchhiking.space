@@ -1,12 +1,8 @@
 class SubscriptionsController < ApplicationController
   def create
-    begin
-      @user = User.from_omniauth(request.env['omniauth.auth'])
-      flash[:success] = "Welcome, #{@user.name}! You are now subscribed."
-    rescue
-      flash[:warning] = "There was an error while trying to add you to our list..."
-    end
-    redirect_to root_path
+    @user = User.from_omniauth(request.env['omniauth.auth'])
+    found_repos = StarredRepos.new(@user.nickname, 1.week.ago).starred_repos
+    render text: found_repos
   end
 
   def destroy
