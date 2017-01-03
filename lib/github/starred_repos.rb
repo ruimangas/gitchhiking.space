@@ -13,9 +13,9 @@ class StarredRepos
     response = github.get(base_path)
     last_page = pagination_size(response.headers)
     fetched_repos = []
+    current_page = 1
 
     while current_page <= last_page
-      p current_page
       repos = github.get(path(current_page))
 
       unless check_next_page?(repos)
