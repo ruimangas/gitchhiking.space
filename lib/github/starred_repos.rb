@@ -12,23 +12,24 @@ class StarredRepos
   def starred_repos
     response = github.get(base_path)
     last_page = pagination_size(response.headers)
-    current_page = 1
     fetched_repos = []
 
     while current_page <= last_page
+      p current_page
       repos = github.get(path(current_page))
 
-      if check_next_page?(response)
-        fetched_repos << repos
-      else
+      unless check_next_page?(repos)
         fetched_repos << recently_starred(repos)
         break
       end
 
+      fetched_repos << repos
       current_page += 1
     end
 
-    return fetched_repos
+    fetched_repos.flatten.map do |repo|
+      repo.fetch('repo').fetch('name')
+    end
   end
 
   private
