@@ -1,5 +1,4 @@
 class StarsMailer < ApplicationMailer
-
   def recent_stars_notification(user, starred_repos)
     mg_client = Mailgun::Client.new(api_key)
     mg_client.send_message(domain, mail_params(user, starred_repos)) 
