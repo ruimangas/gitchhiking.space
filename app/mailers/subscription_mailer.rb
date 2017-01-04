@@ -14,12 +14,4 @@ class SubscriptionMailer < ApplicationMailer
       :text => "Welcome. You are successfully subscribed! You will receive a weekly digest of your github starred repos."
     }
   end
-
-  def domain
-    ENV['DOMAIN']
-  end
-
-  def api_key
-    ENV['MAILGUN_KEY']
-  end
 end

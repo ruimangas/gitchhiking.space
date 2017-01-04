@@ -14,13 +14,5 @@ class StarsMailer < ApplicationMailer
       :text => "This week you starred the following repos: #{repos.join(', ')}"
     }
   end
-
-  def domain
-    ENV['DOMAIN']
-  end
-
-  def api_key
-    ENV['MAILGUN_KEY']
-  end
 end
 

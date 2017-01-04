@@ -1,4 +1,12 @@
 class ApplicationMailer < ActionMailer::Base
   default from: 'from@example.com'
   layout 'mailer'
+
+  def domain
+    ENV['DOMAIN']
+  end
+
+  def api_key
+    ENV['MAILGUN_KEY']
+  end
 end
