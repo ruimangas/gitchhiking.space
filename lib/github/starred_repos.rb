@@ -3,7 +3,7 @@ require 'github/github_api'
 class StarredRepos
   attr_accessor :nickname, :github, :start_date
 
-  def initialize(nickname, start_date)
+  def initialize(nickname, start_date = nil)
     @nickname = nickname
     @github = GitHubApi.new
     @start_date = start_date ||= one_week_ago

@@ -7,7 +7,6 @@ class User < ApplicationRecord
       u.email = auth_hash['info']['email']
       u.nickname = auth_hash['info']['nickname']
       u.uid = auth_hash['uid']
-      u.starred = auth_hash['extra']['raw_info']['starred_url']
     end
   end
 end
