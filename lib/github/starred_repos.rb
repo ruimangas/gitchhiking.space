@@ -29,11 +29,11 @@ class StarredRepos
 
     fetched_repos.flatten.map do |repo|
       repo = {
-        name: fetch('repo').fetch('name'),
-        description: fetch('repo').fetch('description'),
-        url: fetch('repo').fetch('html_url'),
-        avatar: fetch('repo').fetch('owner').fetch('avatar_url'),
-        star_count: fetch('repo').fetch('stargazers_count')
+        name: repo.fetch('repo').fetch('name'),
+        description: repo.fetch('repo').fetch('description'),
+        url: repo.fetch('repo').fetch('html_url'),
+        avatar: repo.fetch('repo').fetch('owner').fetch('avatar_url'),
+        star_count: repo.fetch('repo').fetch('stargazers_count')
       }
     end
   end
