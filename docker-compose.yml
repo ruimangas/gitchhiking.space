@@ -1,7 +1,7 @@
 star:
   build: .
   ports:
-    - "3000:3000"
+    - "3001:3000"
   links:
     - "db"
   volumes:
@@ -10,4 +10,4 @@ star:
 db:
   image: "postgres:9.4.2"
   ports:
-    - "5432:5432"
+    - "4554:5432"

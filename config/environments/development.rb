@@ -26,6 +26,16 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :authentication => :plain,
+    :address => ENV['SMTP_DOMAIN'],
+    :port => 587,
+    :domain => ENV['DOMAIN'],
+    :user_name => ENV['SMTP_LOGIN'],
+    :password => ENV['SMTP_PASS']
+  }
+
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
