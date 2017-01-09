@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   get 'subscriptions/create'
-  get 'subscriptions/destroy'
+  delete 'subscriptions/destroy'
 
-  root to: 'stars#index'
+  root to: 'subscriptions#index'
 
   get '/auth/:provider/callback', to: 'subscriptions#create'
 end
