@@ -57,10 +57,14 @@ class StarredRepos
 
   # returns how many pages the response has
   def pagination_size(headers)
-    links = headers.fetch('link') \
-            .scan(/<(.*?)>/).flatten
+    if headers.key?('link')
+      links = headers.fetch('link') \
+        .scan(/<(.*?)>/).flatten
 
-    links.last.split('=').last.to_i
+      links.last.split('=').last.to_i
+    else
+      1
+    end
   end
 
   def one_week_ago
