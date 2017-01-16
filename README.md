@@ -1,2 +1,3 @@
-
-![alt text](https://raw.githubusercontent.com/ruimangas/gitchhiking.space/master/app/assets/images/header_mail.png "Logo Title Text 1")
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ruimangas/gitchhiking.space/master/app/assets/images/header_mail.png" alt="Gitchhiking logo"/>
+</p>
