@@ -1,3 +1,59 @@
 // Place all the styles related to the subscriptions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-image: image-url("bg.png");
+  background-repeat: repeat;
+}
+
+.subtitle {
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.container-fluid {
+  margin-top: 10%;
+}
+
+.content {
+  margin-top: 2%;
+  text-align: center;
+}
+
+.btn-main {
+  -webkit-border-radius: 13;
+  -moz-border-radius: 13;
+  border-radius: 13px;
+  -webkit-box-shadow: 0px 0px 20px #e0e0e0;
+  -moz-box-shadow: 0px 0px 20px #e0e0e0;
+  -webkit-appearance: button;
+  box-shadow: 0px 0px 20px #e0e0e0;
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  font-size: 30px;
+  height: 70px;
+  width: 30%;
+  padding: 10px 20px 10px 20px;
+  border: solid #F5C100 2px;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.btn-subscribe {
+  color: #F5C100;
+}
+
+.btn-unsubscribe {
+  color: #BF0000;
+}
+
+.btn-subscribe:hover {
+  background: #F5C100;
+  color: #FFFFFF;
+}
+
+.btn-unsubscribe:hover {
+  background: #BF0000;
+  color: #FFFFFF;
+}

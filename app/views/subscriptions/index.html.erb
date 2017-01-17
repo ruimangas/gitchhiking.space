@@ -1,3 +1,6 @@
-<%= link_to 'subscribe', '/auth/github' %>
-
-<%= link_to 'unsubscribe', subscriptions_destroy_path, method: :delete %>
+<div class="row">
+    <%= button_to 'Subscribe', '/auth/github', class: "btn-main btn-subscribe" %>
+    <!--
+       -<%= button_to 'Unsubscribe', subscriptions_destroy_path, method: :delete, class: "btn btn-subscribe" %>
+       -->
+</div>
