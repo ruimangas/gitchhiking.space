@@ -1,4 +1,8 @@
 <div class="row">
-    <%= button_to 'Subscribe', subscriptions_create_path, method: :get, class: "btn btn-subscribe" %>
-    <%= button_to 'Unsubscribe', subscriptions_destroy_path, method: :delete, class: "btn btn-subscribe" %>
+  <div class="col-md-6 col-lg-6">
+    <%= button_to 'Subscribe', subscriptions_create_path, method: :get, class: "btn-main btn-subscribe" %>
+  </div>
+  <div class="col-md-6 col-lg-6">
+    <%= button_to 'Unsubscribe', subscriptions_destroy_path, method: :delete, class: "btn-main btn-unsubscribe" %>
+  </div>
 </div>

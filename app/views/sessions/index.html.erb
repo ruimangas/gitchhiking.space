@@ -1,3 +1,7 @@
 <div class="row">
+    <% flash.each do |key, value| %>
+      <%= content_tag :div, value, class: "flash #{key}" %>
+    <% end %>
+
     <%= button_to 'Github Login', '/auth/github', class: "btn-main btn-subscribe" %>
 </div>

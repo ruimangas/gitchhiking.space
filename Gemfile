@@ -18,7 +18,14 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'webmock'
+  gem 'vcr'
   gem 'sqlite3'
+  gem 'rspec-collection_matchers'
+  gem "rspec-rails"
+  gem 'shoulda-matchers', '~> 3.1'
+  gem "factory_girl_rails"
+  gem 'faker'
 end
 
 group :development do
