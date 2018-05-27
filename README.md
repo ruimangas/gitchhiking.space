@@ -12,7 +12,7 @@ $ docker-compose up
 #### Creating the database
 
 ```
-$ docker-compose run <container-name> rake db:create
+$ docker exec <container-name> rake db:create db:migrate
 ```
 
 Visit ```localhost:3001```
